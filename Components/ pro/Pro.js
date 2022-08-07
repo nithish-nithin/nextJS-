@@ -14,6 +14,9 @@ import Wmd from "./asset/wm.png";
 import Be from "./asset/be.png";
 import Dm from "./asset/dm.png";
 import Layout2 from "../layout/Layout2";
+import DpComponent from "../ DpComponent/DpComponent";
+import DpComponent2 from "../ DpComponent2/DpComponent2";
+
 const Item = styled("div")(({ theme }) => ({
   fontFamily: "Roboto",
   fontSize: "52px",
@@ -202,6 +205,37 @@ const Sec3Para = styled("div")(({ theme }) => ({
     top: "10px",
   },
 }));
+const Sec3Head2 = styled("div")(({ theme }) => ({
+  fontSize: "24px",
+
+  textAlign: "center",
+  position: "relative",
+  top: "25px",
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+    fontSize: "24px",
+  },
+}));
+const Sec3Par2 = styled("div")(({ theme }) => ({
+  fontFamily: "Roboto",
+  fontSize: "28px",
+  fontWeight: 300,
+  lineHeight: "38.2px",
+  letterSpacing: "0px",
+  textAlign: "center",
+  position: "relative",
+  top: "30px",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "14px",
+    fontWeight: 300,
+    lineHeight: "20px",
+    letterSpacing: "0px",
+    textAlign: "center",
+    position: "relative",
+    top: "40px",
+  },
+}));
 const Sec3Para2 = styled("div")(({ theme }) => ({
   fontFamily: "Roboto",
   fontSize: "20px",
@@ -285,6 +319,39 @@ const Sec3Para3 = styled("span")(({ theme }) => ({
     lineHeight: "18px",
     letterSpacing: "0em",
     textAlign: "left",
+  },
+}));
+const SectionHead = styled("div")(({ theme }) => ({
+  fontFamily: "Times",
+  fontSize: "24px",
+  fontWeight: 700,
+  lineHeight: "29px",
+  letterSpacing: "0em",
+  textAlign: "center",
+  color: "#1B1B1B",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "16px",
+    fontWeight: 700,
+    lineHeight: "19px",
+    letterSpacing: "0em",
+    textAlign: "center",
+  },
+}));
+const SectionPara = styled("div")(({ theme }) => ({
+  fontFamily: "Roboto",
+  fontSize: "28px",
+  fontWeight: 300,
+  lineHeight: "39px",
+  letterSpacing: "0px",
+  textAlign: "center",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "14px",
+    fontWeight: 300,
+    lineHeight: "20px",
+    letterSpacing: "0px",
+    textAlign: "center",
+    marginTop: "10px",
   },
 }));
 function Pro() {
@@ -434,12 +501,77 @@ function Pro() {
       </Box>
       <Box
         sx={{
-          height: "700px",
+          position: "relative",
+          top: "40px",
+        }}
+      >
+        <SectionHead>Our Projects</SectionHead>
+        <SectionPara>We did projects for many startups and brands</SectionPara>
+      </Box>
+
+      <Box
+        sx={{
           width: "100%",
-          backgroundColor: "red",
+          height: {
+            sm: "800px",
+            xs: "450px",
+          },
+          overflowX: "auto",
+          overflowY: "hidden",
+
+          "&::-webkit-scrollbar": {
+            width: "0.4em",
+            backgroundColor: "red",
+            display: "none",
+          },
         }}
       >
         <Layout2 />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#EEEEEE",
+          height: "600px",
+        }}
+      >
+        <Sec3Head2>Design Process</Sec3Head2>
+
+        <Grid container>
+          <Grid item xs={12} sm={6}>
+            <Sec3Par2>
+              Masterpieces are always crafted with undying passion, a dash of
+              craziness and a lot of discipline.
+            </Sec3Par2>
+          </Grid>
+        </Grid>
+        <DpComponent />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "white",
+          height: "700px",
+        }}
+      ></Box>
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#EEEEEE",
+          height: "600px",
+        }}
+      >
+        <Sec3Head2>Development Process</Sec3Head2>
+
+        <Grid container>
+          <Grid item xs={12} sm={6}>
+            <Sec3Par2>
+              Masterpieces are always crafted with undying passion, a dash of
+              craziness and a lot of discipline.
+            </Sec3Par2>
+          </Grid>
+        </Grid>
+        <DpComponent2 />
       </Box>
     </div>
   );
