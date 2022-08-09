@@ -16,7 +16,9 @@ import Dm from "./asset/dm.png";
 import Layout2 from "../layout/Layout2";
 import DpComponent from "../ DpComponent/DpComponent";
 import DpComponent2 from "../ DpComponent2/DpComponent2";
-
+import Cl from "../ Client/Cl.js";
+import Footer from "../ footer/Footer";
+import Form from "../ form/Form";
 const Item = styled("div")(({ theme }) => ({
   fontFamily: "Roboto",
   fontSize: "52px",
@@ -428,7 +430,7 @@ function Pro() {
         sx={{
           height: "199px",
           maxWidth: "100%",
-          backgroundColor: "white",
+          backgroundColor: "pink",
         }}
       >
         <container></container>
@@ -551,9 +553,11 @@ function Pro() {
         sx={{
           width: "100%",
           backgroundColor: "white",
-          height: "700px",
+          height: "600px",
         }}
-      ></Box>
+      >
+        <Cl />
+      </Box>
       <Box
         sx={{
           width: "100%",
@@ -572,6 +576,37 @@ function Pro() {
           </Grid>
         </Grid>
         <DpComponent2 />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "white",
+
+          height: "600px",
+        }}
+      >
+        PPPP
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "600px",
+          backgroundColor: "#F8F8F8",
+        }}
+      >
+        <Form />
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: {
+            xs: "400px",
+            sm: "600px",
+          },
+          backgroundColor: "white",
+        }}
+      >
+        <Footer />
       </Box>
     </div>
   );

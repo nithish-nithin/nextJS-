@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Pro from "../Components/ pro/Pro";
+import Pro from "../Components/ pro/Pro.js";
 
 export default function Home() {
   return (
