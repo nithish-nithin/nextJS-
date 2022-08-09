@@ -12,19 +12,19 @@ const Ic = styled("div")(({ theme }) => ({
 }));
 const Cirimg = styled("div")(({ theme }) => ({
   position: "relative",
-  bottom: "80px",
+  bottom: "300px",
   [theme.breakpoints.down("sm")]: {
     position: "relative",
-    bottom: "15px",
+    bottom: "145px",
   },
 }));
 const Cirimg2 = styled("div")(({ theme }) => ({
   position: "relative",
-  top: "200px",
+  top: "10px",
   [theme.breakpoints.down("sm")]: {
     width: "80px",
-    left: "150px",
-    top: "160px",
+    left: "160px",
+    top: "40px",
   },
 }));
 const Chead = styled("div")(({ theme }) => ({
@@ -35,7 +35,7 @@ const Chead = styled("div")(({ theme }) => ({
   letterSpacing: "0em",
   textAlign: "center",
   position: "relative",
-  top: "390px",
+  top: "190px",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "16px",
@@ -44,19 +44,19 @@ const Chead = styled("div")(({ theme }) => ({
     letterSpacing: "0em",
     textAlign: "center",
     position: "relative",
-    top: "260px",
+    top: "160px",
   },
 }));
 const Cpara = styled("div")(({ theme }) => ({
   width: "300px",
   position: "relative",
-  left: "560px",
-  top: "520px",
+  left: "570px",
+  top: "300px",
   [theme.breakpoints.down("sm")]: {
     width: "100px",
     position: "relative",
-    left: "140px",
-    top: "380px",
+    left: "150px",
+    top: "280px",
     fontSize: "10px",
   },
 }));

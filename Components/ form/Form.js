@@ -2,7 +2,7 @@ import React from "react";
 import { Input, styled } from "@mui/material";
 import { Box, Container, Grid, List } from "@mui/material";
 import Image from "next/image";
-import styles from "../ form/Form.module.css";
+import Ice from "../ form/img/icon.png";
 const Head = styled("div")(({ theme }) => ({
   fontFamily: "Times New Roman",
   fontSize: "24px",
@@ -78,6 +78,50 @@ const Inputo2 = styled("input")(({ theme }) => ({
     left: "16px",
   },
 }));
+const Ic = styled("div")(({ theme }) => ({
+  position: "relative",
+  top: "110px",
+  width: "50px",
+  [theme.breakpoints.down("sm")]: {
+    position: "relative",
+    top: "50px",
+    left: "16px",
+    width: "50px",
+  },
+}));
+const Spa = styled("span")(({ theme }) => ({
+  position: "relative",
+  top: "78px",
+  left: "45px",
+  [theme.breakpoints.down("sm")]: {
+    position: "relative",
+    top: "19px",
+    left: "59px",
+    width: "50px",
+  },
+}));
+
+const Btn = styled("button")(({ theme }) => ({
+  height: "54px",
+  width: "184px",
+  borderRadius: "0px",
+  fontSize: "16px",
+  fontWeight: 400,
+  lineHeight: "26px",
+  letterSpacing: "0em",
+  backgroundColor: "#0f9d58",
+  color: "white",
+  position: "relative",
+  top: "103px",
+  cursor: "pointer",
+  [theme.breakpoints.down("sm")]: {
+    position: "relative",
+    top: "63px",
+    left: "30px",
+    width: "274px",
+  },
+}));
+
 function Form() {
   return (
     <div>
@@ -92,14 +136,25 @@ function Form() {
           </Grid>
           <Grid item xs={12} sm={1}></Grid>
           <Grid item xs={12} sm={8}>
-            <Inputo type={"text"} placeholder="Name"></Inputo>
-            <Inputo type={"text"} placeholder="Company"></Inputo>
-            <Inputo type={"gmail"} placeholder="email"></Inputo>
-            <Inputo type={"text"} placeholder="budget"></Inputo>
+            <Inputo type={"text"} placeholder="Name" />
+            <Inputo type={"text"} placeholder="Company" />
+            <Inputo type={"gmail"} placeholder="email" />
+            <Inputo type={"text"} placeholder="budget" />
             <Inputo2
               type={"text"}
               placeholder="Tell us something about your project"
             ></Inputo2>
+            <Grid container>
+              <Grid item xs={12} sm={6}>
+                <Ic>
+                  <Image src={Ice} />
+                </Ic>
+                <Spa>File size should not exceed 10MB</Spa>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Btn>Send </Btn>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

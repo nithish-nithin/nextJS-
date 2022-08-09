@@ -141,7 +141,6 @@ function Cl() {
               sx={{
                 width: "100%",
                 overflowX: "auto",
-                overflowY: "hidden",
                 top: {
                   sm: "240px",
                   xs: "174px",
@@ -162,6 +161,7 @@ function Cl() {
                 style={{
                   display: "flex",
                   overflowX: "auto",
+                  overflowY: "hidden",
                 }}
                 sx={{
                   width: {
@@ -170,7 +170,7 @@ function Cl() {
                   },
                   height: {
                     sm: "500px",
-                    xs: "270px",
+                    xs: "280px",
                   },
                 }}
               >

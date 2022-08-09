@@ -7,18 +7,21 @@ import Bd1 from "../ pro/asset/Dbo.png";
 import Bd2 from "../ pro/asset/dbox2.png";
 import Bd3 from "../ pro/asset/dbox3.png";
 import Image from "next/image";
+import Slash from "../ pro/asset/slash.png";
 import Webimgm from "./asset/ mwebicon.png";
 import Webimgd from "./asset/dwebicon.png";
 import Cd from "./asset/cd.png";
 import Wmd from "./asset/wm.png";
 import Be from "./asset/be.png";
 import Dm from "./asset/dm.png";
+import Rate from "../ pro/asset/ratingIcon.png";
 import Layout2 from "../layout/Layout2";
 import DpComponent from "../ DpComponent/DpComponent";
 import DpComponent2 from "../ DpComponent2/DpComponent2";
 import Cl from "../ Client/Cl.js";
 import Footer from "../ footer/Footer";
 import Form from "../ form/Form";
+import Caro from "../ Caro/Caro.js";
 const Item = styled("div")(({ theme }) => ({
   fontFamily: "Roboto",
   fontSize: "52px",
@@ -80,6 +83,41 @@ const Para = styled("div")(({ theme }) => ({
     top: "193px",
   },
 }));
+const Subhead = styled("div")(({ theme }) => ({
+  fontFamily: "Roboto",
+  fontSize: "32px",
+  fontWeight: 400,
+  lineHeight: "45px",
+  letterSpacing: "0em",
+  textAlign: "left",
+  color: "#555555",
+  position: "relative",
+  top: "50px",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "14px",
+    fontweight: 400,
+    lineHeight: "21px",
+    letterSpacing: "0em",
+    textAlign: "center",
+    position: "relative",
+    top: "30px",
+  },
+}));
+const Rateing = styled("div")(({ theme }) => ({
+  position: "relative",
+  top: "30px",
+  [theme.breakpoints.down("sm")]: {
+    width: "100px",
+    position: "relative",
+    top: "10px",
+    left: "120px",
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItem: "center",
+  },
+}));
 
 const Boxm = styled("div")(({ theme }) => ({
   display: "none",
@@ -98,11 +136,12 @@ const Boxm1 = styled("div")(({ theme }) => ({
     height: "89px",
     backgroundColor: "#D02C75",
     borderRadius: "8px",
+    position: "relative",
   },
 }));
 const Icon = styled("div")(({}) => ({
   position: "absolute",
-  left: "40px",
+  left: "20px",
   top: "15px",
 }));
 const Boxm2 = styled("div")(({ theme }) => ({
@@ -356,6 +395,29 @@ const SectionPara = styled("div")(({ theme }) => ({
     marginTop: "10px",
   },
 }));
+const Mboxhead = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    fontFamily: "Roboto",
+    fontSize: "20px",
+    fontWeight: 900,
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
+    marginTop: "8px",
+    color: "white",
+  },
+}));
+const Mboxpara = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    fontFamily: "Roboto",
+    fontSize: "12px",
+    fontweight: 400,
+    lineheight: "16px",
+    letterspacing: "0em",
+    textAlign: "left",
+    color: "white",
+  },
+}));
 function Pro() {
   return (
     <div>
@@ -380,9 +442,24 @@ function Pro() {
                 <Boxm1>
                   <Icon>
                     <Eye src={Icon1} />
+                    <Mboxhead>15+</Mboxhead>
+                    <Mboxpara>Branding & Design</Mboxpara>
                   </Icon>
                 </Boxm1>
-                 <Boxm2></Boxm2> <Boxm3></Boxm3> 
+                <Boxm2>
+                  <Icon>
+                    <Eye src={Slash} />
+                    <Mboxhead>22+</Mboxhead>
+                    <Mboxpara>Developmemt</Mboxpara>
+                  </Icon>
+                </Boxm2>
+                <Boxm3>
+                  <Icon>
+                    <Mboxhead>27+</Mboxhead>
+                    <Mboxpara>No. of Clients</Mboxpara>
+                  </Icon>
+                </Boxm3>
+                 
               </Boxm>
             </Grid>
             <Grid item xs={1} sm={1}></Grid>
@@ -411,29 +488,26 @@ function Pro() {
         sx={{
           height: "199px",
           maxWidth: "100%",
-          backgroundColor: "red",
         }}
       >
         <Grid container>
           <Container>
             <Grid container>
               <Grid item xs={12} sm={2}>
-                llll
+                <Rateing>
+                  <Image src={Rate} />
+                </Rateing>
               </Grid>
               <Grid item xs={12} sm={4}></Grid>
-              <Grid item xs={12} sm={6}></Grid>
+              <Grid item xs={12} sm={6}>
+                <Subhead>
+                  Trusted by 23+ Clients, across industry verticals, worldwide
+                  since 2019.
+                </Subhead>
+              </Grid>
             </Grid>
           </Container>
         </Grid>
-      </Box>
-      <Box
-        sx={{
-          height: "199px",
-          maxWidth: "100%",
-          backgroundColor: "pink",
-        }}
-      >
-        <container></container>
       </Box>
       <Box
         sx={{
@@ -585,12 +659,18 @@ function Pro() {
           height: "600px",
         }}
       >
-        PPPP
+        <Sec3Head2>Testimonial</Sec3Head2>
+        <Sec3Par2>We are a design company that emotes and innovates.</Sec3Par2>
+
+        <Caro />
       </Box>
       <Box
         sx={{
           width: "100%",
-          height: "600px",
+          height: {
+            xs: "800px",
+            sm: "600px",
+          },
           backgroundColor: "#F8F8F8",
         }}
       >
@@ -600,7 +680,7 @@ function Pro() {
         sx={{
           width: "100%",
           height: {
-            xs: "400px",
+            xs: "300px",
             sm: "600px",
           },
           backgroundColor: "white",
